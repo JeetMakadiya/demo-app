@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import ChangePassword from "./Components/ChangePassword";
-import CreatePost from "./Components/CreatePost";
-import ForgotPassword from "./Components/ForgotPassword";
-import Login from "./Components/Login";
-import PostList from "./Components/PostList";
-import Profile from "./Components/Profile";
-import Register from "./Components/Register";
-import ResetPassword from "./Components/ResetPassword";
-import Verification from "./Components/Verification";
+import ChangePassword from "./Pages/ChangePassword";
+import CreatePost from "./Pages/CreatePost";
+import ForgotPassword from "./Pages/ForgotPassword";
+import Login from "./Pages/Login";
+import PostList from "./Pages/PostList";
+import Profile from "./Pages/Profile";
+import Register from "./Pages/Register";
+import ResetPassword from "./Pages/ResetPassword";
+import Verification from "./Pages/Verification";
 import RootLayout from "./Layouts/RootLayout";
 
 export const router = createBrowserRouter([

@@ -1,6 +1,6 @@
-import { Button } from "antd";
 import React from "react";
 import { Outlet } from "react-router-dom";
+import { Button } from "../Components/UI/Button";
 import Logo from "../Images/Logo";
 
 const RootLayout = () => {
@@ -14,10 +14,10 @@ const RootLayout = () => {
           <Logo />
         </div>
         <div>
-          <Button className="default-btn mr-3">Login</Button>
-          <Button type="primary" className="primary-btn">
-            Register
+          <Button variant="outlined-white" className="mr-3">
+            Login
           </Button>
+          <Button variant="solid">Register</Button>
         </div>
       </div>
       <Outlet />

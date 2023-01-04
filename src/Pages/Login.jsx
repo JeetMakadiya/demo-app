@@ -1,5 +1,8 @@
-import { Button, Checkbox, Form, Input } from "antd";
+import { Form } from "antd";
 import React from "react";
+import { Button } from "../Components/UI/Button";
+import { Checkbox } from "../Components/UI/Checkbox";
+import { Input } from "../Components/UI/Input";
 
 const Login = () => {
   const onFinish = (values) => {
@@ -19,37 +22,44 @@ const Login = () => {
             onFinish={onFinish}
             layout="vertical"
           >
-            <Form.Item
+            <Input
+              type="email"
               label="Email"
               name="email"
               rules={[{ required: true, message: "Please input your Email!" }]}
-            >
-              <Input placeholder="Enter your Email" />
-            </Form.Item>
-            <Form.Item
+              placeholder="Enter your Email"
+            />
+            <Input
+              type="password"
               label="Password"
               name="password"
               rules={[
                 { required: true, message: "Please input your Password!" },
               ]}
-            >
-              <Input type="password" placeholder="Enter Your Password" />
-            </Form.Item>
+              placeholder="Enter Your Password"
+            />
+            <div className="flex justify-between">
+              <div>
+                <Form.Item>
+                  <Checkbox
+                    name="remember"
+                    label="Remember Me"
+                    valuePropName="checked"
+                    noStyle
+                  />
+                </Form.Item>
+              </div>
+              <div className="pt-1">
+                <a
+                  className="login-form-forgot text-orange-500 hover:text-orange-500 hover:underline"
+                  href=""
+                >
+                  Forgot password?
+                </a>
+              </div>
+            </div>
             <Form.Item>
-              <Form.Item name="remember" valuePropName="checked" noStyle>
-                <Checkbox className="text-orange-500">Remember Me</Checkbox>
-              </Form.Item>
-              <a className="login-form-forgot text-orange-500" href="">
-                Forgot password?
-              </a>
-            </Form.Item>
-            <Form.Item>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="primary-btn"
-                block
-              >
+              <Button variant="solid" htmlType="submit" block>
                 Sign in
               </Button>
             </Form.Item>

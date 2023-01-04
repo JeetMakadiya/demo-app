@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button, Form, Input } from "antd";
+import { Form } from "antd";
 import OtpInput from "react-otp-input";
 import styled from "styled-components";
+import { Button } from "../Components/UI/Button";
 
 const Verification = () => {
   const [otp, setOtp] = useState("");
@@ -55,12 +56,17 @@ const Verification = () => {
               />
             </Form.Item>
             <Form.Item>
-              <Btn htmlType="submit" block>
+              <Button variant="solid" htmlType="submit" block>
                 Verify
-              </Btn>
-              <Btn htmlType="submit" block>
+              </Button>
+              <Button
+                variant="outlined-orange"
+                className="mt-4"
+                htmlType="submit"
+                block
+              >
                 Change Email
-              </Btn>
+              </Button>
             </Form.Item>
           </Form>
         </div>

@@ -1,5 +1,6 @@
-import { Button, Form, Input } from "antd";
+import { Form, Input } from "antd";
 import React from "react";
+import { Button } from "../Components/UI/Button";
 
 const ForgotPassword = () => {
   const onFinish = (values) => {
@@ -30,12 +31,7 @@ const ForgotPassword = () => {
               <Input placeholder="Enter your Email" />
             </Form.Item>
             <Form.Item>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="primary-btn"
-                block
-              >
+              <Button variant="solid" htmlType="submit" block>
                 Send
               </Button>
             </Form.Item>
