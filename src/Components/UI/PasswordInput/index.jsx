@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const PasswordInput = ({ label, name, rules, type, placeholder, ...props }) => {
   const StyledPasswordInput = styled(Input.Password)`
-    width: auto;
+    width: 100%;
     &:hover {
       border-color: #ff7f00 !important;
     }

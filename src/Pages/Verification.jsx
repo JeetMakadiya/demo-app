@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form } from "antd";
-import OtpInput from "react-otp-input";
 import styled from "styled-components";
 import { Button } from "../Components/UI/Button";
+import { OtpInput } from "../Components/UI/OtpInput";
 
 const Verification = () => {
   const [otp, setOtp] = useState("");
@@ -27,11 +27,11 @@ const Verification = () => {
     <div className="flex h-[calc(100vh-56px)]">
       <div className="w-1/4 bg-blue-500"></div>
       <div className="w-3/4 mt-16 ml-16">
+        <h1 className="text-2xl font-bold mb-2">Verification</h1>
+        <p className="mb-2 opacity-40">
+          We have sent you OTP on your email address
+        </p>
         <div className="w-1/3 flex flex-col">
-          <h1 className="text-2xl font-bold mb-2">Verification</h1>
-          <p className="mb-2 opacity-40">
-            We have sent you OTP on your email address
-          </p>
           <Form
             name="normal_login"
             className="login-form"
@@ -39,22 +39,13 @@ const Verification = () => {
             onFinish={onFinish}
             layout="vertical"
           >
-            <Form.Item
+            <OtpInput
               name="otp"
               rules={[{ required: true, message: "Please input your OTP!" }]}
-            >
-              <OtpInput
-                value={otp}
-                onChange={handleOtpChange}
-                numInputs={4}
-                separator={<span>-</span>}
-                inputStyle={{
-                  border: "1px solid rgba(1,1,1,0.2)",
-                  width: "38px",
-                  height: "38px",
-                }}
-              />
-            </Form.Item>
+              value={otp}
+              onChange={handleOtpChange}
+              numInputs={4}
+            />
             <Form.Item>
               <Button variant="solid" htmlType="submit" block>
                 Verify
